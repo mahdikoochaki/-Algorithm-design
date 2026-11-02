@@ -1,0 +1,18 @@
+
+def DC(a, n):
+
+    if n == 1:
+        return a
+
+    if n % 2 == 0:
+        return DC(a, n // 2) * DC(a, n // 2)
+
+    return a * DC(a, n - 1)
+
+
+a = 2
+n = 6
+
+result = DC(a, n)
+
+print("Result:", result)
